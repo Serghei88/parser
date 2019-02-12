@@ -1,0 +1,12 @@
+/Users/sergejdvorzanskij/RiderProjects/Parser/WebParser/bin/Debug/netcoreapp2.1/WebParser.deps.json
+/Users/sergejdvorzanskij/RiderProjects/Parser/WebParser/bin/Debug/netcoreapp2.1/WebParser.runtimeconfig.json
+/Users/sergejdvorzanskij/RiderProjects/Parser/WebParser/bin/Debug/netcoreapp2.1/WebParser.runtimeconfig.dev.json
+/Users/sergejdvorzanskij/RiderProjects/Parser/WebParser/bin/Debug/netcoreapp2.1/WebParser.dll
+/Users/sergejdvorzanskij/RiderProjects/Parser/WebParser/bin/Debug/netcoreapp2.1/WebParser.pdb
+/Users/sergejdvorzanskij/RiderProjects/Parser/WebParser/obj/Debug/netcoreapp2.1/WebParser.csprojAssemblyReference.cache
+/Users/sergejdvorzanskij/RiderProjects/Parser/WebParser/obj/Debug/netcoreapp2.1/WebParser.csproj.CoreCompileInputs.cache
+/Users/sergejdvorzanskij/RiderProjects/Parser/WebParser/obj/Debug/netcoreapp2.1/WebParser.AssemblyInfoInputs.cache
+/Users/sergejdvorzanskij/RiderProjects/Parser/WebParser/obj/Debug/netcoreapp2.1/WebParser.AssemblyInfo.cs
+/Users/sergejdvorzanskij/RiderProjects/Parser/WebParser/obj/Debug/netcoreapp2.1/WebParser.dll
+/Users/sergejdvorzanskij/RiderProjects/Parser/WebParser/obj/Debug/netcoreapp2.1/WebParser.pdb
+/Users/sergejdvorzanskij/RiderProjects/Parser/WebParser/bin/Debug/netcoreapp2.1/appsettings.json
