@@ -49,7 +49,7 @@ namespace WebParser
         private static async Task<bool> CheckProjectTemplateImages(ProjectTemplate projectTemplate)
         {
             var imageUrls = GenerateUrls(projectTemplate.ID, projectTemplate.Project.Pages.Count);
-            var tasks = imageUrls.Select(ImagesConverter.CheckImageExistsAndNotGrayed).ToList();
+            var tasks = imageUrls.Select(ImageMagicHelper.CheckImageExistsAndNotBroken).ToList();
             var results = await Task.WhenAll(tasks);
             return !results.Contains(false);
         }
@@ -63,17 +63,6 @@ namespace WebParser
             }
 
             return result;
-        }
-
-        private static IList<string> GetImageUrlsFromWebPage(string url)
-        {
-            var web = new HtmlWeb();
-            var document = web.Load(url);
-            var urls = document.DocumentNode.Descendants("img")
-                .Select(e => e.GetAttributeValue("src", null))
-                .Where(s => !string.IsNullOrEmpty(s));
-
-            return urls.ToList();
         }
 
         private static async Task<bool> ImageNotGrayed(string imageUrl)

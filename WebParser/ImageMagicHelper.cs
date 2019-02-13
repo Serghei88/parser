@@ -6,15 +6,21 @@ using ImageMagick;
 
 namespace WebParser
 {
-    public static class ImagesConverter
+    public static class ImageMagicHelper
     {
-        public static async Task<bool> CheckImageExistsAndNotGrayed(string imageUrl)
+
+        public static async Task<bool> CheckImageExistsAndNotBroken(string imageUrl)
         {
-            if (! await ImageExists(imageUrl))
+            if (! await CheckImageExists(imageUrl))
             {
                 return true; //ignore missing images at the moment
             }
 
+            return CheckImageNotBroken(imageUrl);
+        }
+        
+        private static bool CheckImageNotBroken(string imageUrl)
+        {
             try
             {
                 using (var image = new MagickImage(imageUrl))
@@ -36,7 +42,7 @@ namespace WebParser
                 return false;
             }
         }
-        private static async Task<bool> ImageExists(string imageUrl)
+        private static async Task<bool> CheckImageExists(string imageUrl)
         {
             WebResponse response = null;
             var request = (HttpWebRequest) WebRequest.Create(imageUrl);
