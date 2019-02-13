@@ -26,7 +26,6 @@
         </e>
         <e p="out-magic1.txt" t="Include" />
         <e p="out-magic2.txt" t="Include" />
-        <e p="out.txt" t="Include" />
         <e p="out2-bash.txt" t="Include" />
         <e p="Program.cs" t="Include" />
         <e p="ShellHelper.cs" t="Include" />
