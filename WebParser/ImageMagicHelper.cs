@@ -26,7 +26,7 @@ namespace WebParser
                 using (var image = new MagickImage(imageUrl))
                 {
                     //$"convert {imageUrl} -gravity SouthWest -crop 20%x1%   -format %c  -depth 8  histogram:info:- | sed \'/^$/d\'  | sort -V | head -n 1 | grep fractal | wc -l"
-                    image.Crop(new MagickGeometry(new Percentage(20), new Percentage(1)), Gravity.Southwest);
+                    image.Crop(new MagickGeometry(new Percentage(100), new Percentage(20)), Gravity.South);
                     image.Format = MagickFormat.C;
                     image.Depth = 8;
 

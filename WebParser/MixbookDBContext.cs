@@ -19,7 +19,7 @@ namespace WebParser
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseMySQL(ConfigurationRoot.GetConnectionString("DefaultConnection"));
+            optionsBuilder.UseMySQL(ConfigurationRoot.GetConnectionString("ProdConnection"));
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

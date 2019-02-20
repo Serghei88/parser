@@ -33,7 +33,7 @@ namespace WebParser
                 {
                     checkedProjectTemplatesIds.Add(projectTemplate.ID);
                     Console.WriteLine(
-                        $"{DateTime.Now} Checking project: {checkedProjectTemplatesIds.Count} from {projectTemplates.Count} " +
+                        $"{DateTime.Now} Checking project: {checkedProjectTemplatesIds.Count} id = {projectTemplate.ID} from {projectTemplates.Count} " +
                         $"Total progress = {((float) checkedProjectTemplatesIds.Count / (float) projectTemplates.Count) * 100}%");
 
                     if (!await CheckProjectTemplateImages(projectTemplate))
@@ -49,7 +49,7 @@ namespace WebParser
         private static async Task<bool> CheckProjectTemplateImages(ProjectTemplate projectTemplate)
         {
             var imageUrls = GenerateUrls(projectTemplate.ID, projectTemplate.Project.Pages.Count);
-            var tasks = imageUrls.Select(ImageMagicHelper.CheckImageExistsAndNotBroken).ToList();
+            var tasks = imageUrls.Select(ImageMagicHelper.CheckImageExistsAndNotBroken);
             var results = await Task.WhenAll(tasks);
             return !results.Contains(false);
         }
